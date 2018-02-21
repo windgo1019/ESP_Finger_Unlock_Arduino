@@ -1,4 +1,4 @@
-ESP_Finger 使用ESP8266(NodeMcu)和ESP32與FPC1020AM電容指紋模組做的arduino程式
+#ESP_Finger 使用ESP8266(NodeMcu)和ESP32與FPC1020AM電容指紋模組做的arduino程式
 
   This is a sample for finger search in database 這是一個將放入的指紋與已存入資料庫的指紋做比對的範例<br>
   you can follow this post to get the latest code 你可以追蹤這篇文章來取得最新的程式碼<br>
