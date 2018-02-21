@@ -1,6 +1,5 @@
-# ESP_Finger
+ESP_Finger 使用ESP8266(NodeMcu)和ESP32與FPC1020AM電容指紋模組做的arduino程式
 
-/*
   This is a sample for finger search in database 這是一個將放入的指紋與已存入資料庫的指紋做比對的範例<br>
   you can follow this post to get the latest code 你可以追蹤這篇文章來取得最新的程式碼<br>
   https://bbs.hassbian.com/thread-2768-1-1.html<br>
@@ -67,7 +66,6 @@
   Host命令： 55 AA 00 00 63 00 06 00 00 00 01 00 F4 01 00 00 00 00 00 00 00 00 00 00 5E 02<br>
   Target响应：AA 55 01 00 63 00 05 00 00 00 01 00 01 00 00 00 00 00 00 00 00 00 00 00 6A 01<br>
   <br>
-*/<br>
 <br>
 #include <SoftwareSerial.h><br>
 SoftwareSerial finger(13, 15, false, 256);<br>
