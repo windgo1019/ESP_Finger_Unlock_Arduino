@@ -1,9 +1,9 @@
   <b>#ESP_Finger 使用ESP8266(NodeMcu)和ESP32與FPC1020AM電容指紋模組做的arduino程式</b>
   <br>
+  <br>
   This is a sample for finger search in database 這是一個將放入的指紋與已存入資料庫的指紋做比對的範例<br>
   you can follow this post to get the latest code 你可以追蹤這篇文章來取得最新的程式碼<br>
   https://bbs.hassbian.com/thread-2768-1-1.html<br>
-  <br>
   <br>
   指紋偵測運作影片<br>
   http://v.youku.com/v_show/id_XMzM5NjE1ODUwNA==.html?sharefrom=iphone&sharekey=ed1334d29354b395d114b663099544e23<br>
