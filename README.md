@@ -37,10 +37,15 @@ http://v.youku.com/v_show/id_XMzQwMjM5NjA2OA==.html?sharefrom=iphone&sharekey=b1
   Finger指紋+算法板連接NodeMCU的接腳方式(務必看手冊去接線，接錯模組可能會燒掉)<br>
   https://raw.githubusercontent.com/lvidarte/esp8266/master/nodemcu_pins.png<br>
   Finger   NodeMCU<br>
-  RX     = GPIO 13=D7<br>
-  TX     = GPIO 15=D8<br>
+  TX     = GPIO 13=D7<br>
+  RX     = GPIO 15=D8<br>
   GND    = GND<br>
   3.3V   = 3.3V , 不能接5V,接錯模組會燒掉!<br>
+  <br>
+  <br>
+  LED      NodeMCU<br>
+  +        GPIO16=D0<br>
+  GND      GND<br>
   <br>
   遙控器   NodeMCU<br>
   Door_Open門鎖遙控器的接腳方式<br>
