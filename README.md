@@ -1,14 +1,14 @@
-<b>#ESP_Finger 使用ESP8266(NodeMcu)和ESP32與FPC1020AM電容指紋模組做的arduino程式</b>
-<br>
-<br>
-指紋偵測運作影片<br>
-http://v.youku.com/v_show/id_XMzM5NjE1ODUwNA==.html?sharefrom=iphone&sharekey=ed1334d29354b395d114b663099544e23<br>
-Arduino運作影片<br>
-http://v.youku.com/v_show/id_XMzQwMjM5NjA2OA==.html?sharefrom=iphone&sharekey=b1966edb1145daf5b56b65709b0fbda41<br>
-<br>
+  <b>#ESP_Finger 使用ESP8266(NodeMcu)和ESP32與FPC1020AM電容指紋模組做的arduino程式</b>
+  <br>
   This is a sample for finger search in database 這是一個將放入的指紋與已存入資料庫的指紋做比對的範例<br>
   you can follow this post to get the latest code 你可以追蹤這篇文章來取得最新的程式碼<br>
   https://bbs.hassbian.com/thread-2768-1-1.html<br>
+  <br>
+  <br>
+  指紋偵測運作影片<br>
+  http://v.youku.com/v_show/id_XMzM5NjE1ODUwNA==.html?sharefrom=iphone&sharekey=ed1334d29354b395d114b663099544e23<br>
+  Arduino運作影片<br>
+  http://v.youku.com/v_show/id_XMzQwMjM5NjA2OA==.html?sharefrom=iphone&sharekey=b1966edb1145daf5b56b65709b0fbda41<br>
   <br>
   Hardware list硬體購買清單:<br>
   FPC1020AM+QS808 UART輸出輸入指紋模組<br>
@@ -43,9 +43,9 @@ http://v.youku.com/v_show/id_XMzQwMjM5NjA2OA==.html?sharefrom=iphone&sharekey=b1
   3.3V   = 3.3V , 不能接5V,接錯模組會燒掉!<br>
   <br>
   <br>
-  LED      NodeMCU<br>
-  +        GPIO16=D0<br>
-  GND      GND<br>
+  LED    = NodeMCU <br>
+  +      = GPIO16=D0 <br>
+  GND    = GND <br>
   <br>
   遙控器   NodeMCU<br>
   Door_Open門鎖遙控器的接腳方式<br>
@@ -91,14 +91,7 @@ SoftwareSerial finger(13, 15, false, 256);<br>
 //if you want enable it , uncomment it 假如要使用遙控器開門,請拿掉1行註解<br>
 //#define door_open 4<br>
 <br>
-//Finger command to connect finger device 第一次跟指紋模組溝通<br>
-const byte command[] = {0x55, 0xAA, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01};<br>
-//Finger command1 to check finger touch 檢查是否有放入手指<br>
-const byte command1[] = {0x55, 0xAA, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x01};<br>
-//Finger command2 to save finger pic to imagebuffer 將指紋掃描結果存入暫存檔<br>
-const byte command2[] = {0x55, 0xAA, 0x00, 0x00, 0x60, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x61, 0x01};<br>
-//Finger command3 to search imagebuff in finger database 將暫存檔與指紋資料庫做比對<br>
-const byte command3[] = {0x55, 0xAA, 0x00, 0x00, 0x63, 0x00, 0x06, 0x00, 0x00, 0x00, 0x01, 0x00, 0xF4, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x5E, 0x02};<br>
+
 const char *ssid =  "your_wifi_ssid";    // WIFI名稱<br>
 const char *password =  "your_wifi_password";     // WIFI密碼<br>
 const char *mqtt_server = "your matt server ip"; // your matt server ip<br>
