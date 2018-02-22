@@ -36,21 +36,6 @@
   <br>
   Finger指紋+算法板連接NodeMCU的接腳方式(務必看手冊去接線，接錯模組可能會燒掉)<br>
   https://raw.githubusercontent.com/lvidarte/esp8266/master/nodemcu_pins.png<br>
-  Finger   NodeMCU<br>
-  TX     = GPIO 13=D7<br>
-  RX     = GPIO 15=D8<br>
-  GND    = GND<br>
-  3.3V   = 3.3V , 不能接5V,接錯模組會燒掉!<br>
-  <br>
-  <br>
-  LED    = NodeMCU <br>
-  +      = GPIO16=D0 <br>
-  GND    = GND <br>
-  <br>
-  遙控器   NodeMCU<br>
-  Door_Open門鎖遙控器的接腳方式<br>
-  Open   = GPIO 04=D2<br>
-  GND    = GND<br>
   <br>
   下面為透過usbpcap抓包得到的指紋模組檢查的流程與回應數據<br>
   #command<br>
@@ -77,21 +62,7 @@
   Host命令： 55 AA 00 00 63 00 06 00 00 00 01 00 F4 01 00 00 00 00 00 00 00 00 00 00 5E 02<br>
   Target响应：AA 55 01 00 63 00 05 00 00 00 01 00 01 00 00 00 00 00 00 00 00 00 00 00 6A 01<br>
   <br>
-<br>
-#include <SoftwareSerial.h><br>
-SoftwareSerial finger(13, 15, false, 256);<br>
-<br>
-#include <ESP8266WiFi.h>      // 引用程式庫<br>
-#include <ESP8266mDNS.h><br>
-#include <WiFiUdp.h><br>
-#include <ArduinoOTA.h><br>
-#include <PubSubClient.h><br>
-//定義LED與門鎖遙控器的GPIO腳位<br>
-#define led 16<br>
-//if you want enable it , uncomment it 假如要使用遙控器開門,請拿掉1行註解<br>
-//#define door_open 4<br>
-<br>
-
+//程式內需修改的部份<br>
 const char *ssid =  "your_wifi_ssid";    // WIFI名稱<br>
 const char *password =  "your_wifi_password";     // WIFI密碼<br>
 const char *mqtt_server = "your matt server ip"; // your matt server ip<br>
